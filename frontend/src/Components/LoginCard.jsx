@@ -6,21 +6,27 @@ function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const res = await fetch(`http://localhost:3000/api/v1/auth/login`, {
+      const API = import.meta.env.VITE_API_URL;
+
+      const res = await fetch(`${API}/api/v1/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
 
       const data = await res.json();
+
       if (res.ok) {
         localStorage.setItem("token", data.token);
-        navigate("/more-about-me"); // protected route
+        navigate("/more-about-me");
       } else {
         alert(data.error || "Login failed");
       }
@@ -34,7 +40,6 @@ function LoginForm() {
     <section className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-white to-gray-100">
       <div className="w-full max-w-md bg-white p-10 rounded-[40px] shadow-xl border border-gray-200">
         <h2 className="text-4xl font-extrabold text-center mb-6">Welcome Back 👋</h2>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="flex flex-col gap-2">
             <label className="font-bold ml-2">Email</label>
@@ -48,7 +53,6 @@ function LoginForm() {
               required
             />
           </div>
-
           <div className="flex flex-col gap-2 relative">
             <label className="font-bold ml-2">Password</label>
             <input
@@ -67,14 +71,12 @@ function LoginForm() {
               {showPassword ? "🙈" : "👁️"}
             </span>
           </div>
-
           <button
             type="submit"
             className="w-full py-5 bg-green-500 text-white rounded-2xl font-bold text-lg hover:shadow-lg active:scale-95 transition-all"
           >
             Login
           </button>
-
           <p className="text-center text-gray-500 text-sm">
             Don’t have an account?{" "}
             <button

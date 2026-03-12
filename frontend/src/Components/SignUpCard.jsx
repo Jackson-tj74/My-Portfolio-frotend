@@ -15,13 +15,14 @@ function SignupForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (form.password !== form.confirmPassword) {
       return alert("Passwords do not match");
     }
 
     try {
-      const res = await fetch(`http://localhost:3000/api/v1/auth/signup`, {
+      const API = import.meta.env.VITE_API_URL;
+
+      const res = await fetch(`${API}/api/v1/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -49,7 +50,6 @@ function SignupForm() {
     <section className="min-h-screen flex items-center justify-center bg-gray-100 px-6">
       <div className="w-full max-w-md bg-white p-10 rounded-3xl shadow-lg">
         <h2 className="text-4xl font-extrabold text-center mb-6">Create Account 🚀</h2>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="font-bold">Full Name</label>
@@ -63,7 +63,6 @@ function SignupForm() {
               required
             />
           </div>
-
           <div>
             <label className="font-bold">Email</label>
             <input
@@ -76,7 +75,6 @@ function SignupForm() {
               required
             />
           </div>
-
           <div className="relative">
             <label className="font-bold">Password</label>
             <input
@@ -95,7 +93,6 @@ function SignupForm() {
               {showPassword ? "🙈" : "👁️"}
             </span>
           </div>
-
           <div>
             <label className="font-bold">Confirm Password</label>
             <input
@@ -108,7 +105,6 @@ function SignupForm() {
               required
             />
           </div>
-
           <button
             type="submit"
             className="w-full bg-green-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all"
@@ -116,7 +112,6 @@ function SignupForm() {
             Sign Up
           </button>
         </form>
-
         <p className="text-center text-gray-500 mt-4">
           Already have an account?{" "}
           <button onClick={() => navigate("/login")} className="text-green-500 font-semibold">
