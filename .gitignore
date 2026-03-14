@@ -2,12 +2,10 @@
 
 
 server/node_modules
-server/package-lock.json
-
 
 server/.env
 
 frontend/node_modules
-frontend/package-lock.json
+
 frontend/.env
 frontend/.gitignore
