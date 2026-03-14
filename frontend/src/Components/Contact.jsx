@@ -10,7 +10,8 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:3000/api/v1/auth/contact`, {
+        const API = import.meta.env.VITE_API_URL;
+      const res = await fetch(`${API}/api/v1/auth/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, service, message }),
