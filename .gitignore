@@ -1,10 +1,10 @@
 # Secrets
 
-frontend/.env
+.env
 
 # Node modules
-server/node_modules/
-frontend/node_modules/
+node_modules/
+
 
 # Frontend build output
-frontend/dist/
+dist/
