@@ -1,16 +1,24 @@
 import React from "react";
-
+import { BookOpen, Code2, ExternalLink } from 'lucide-react';
  export function AboutMeCard() {
   const skills = [
     "React.js",
     "Tailwind CSS",
     "Frontend Dev",
     "Backend Dev",
-    "Node.js (MongoDB)",
-    "Problem Solving",
+    "Figma Design",
+    "JavaScript",
+    "node.js/node.js(mongoDb)",
+    "GitHub",
+    "Netlify",
+    "Vercel",
+    "TypeScript",
+    "Vs Code",
+
   ];
 
   return (
+     <>
     <section className="relative py-24 bg-white text-gray-800 px-6 md:px-16  font-sans overflow-hidden">
       
     
@@ -49,9 +57,9 @@ import React from "react";
             </p>
           </div>
 
-          {/* Skills */}
+         
           <div>
-            <h3 className="font-black text-2xl mb-4 uppercase italic tracking-tight">Skills & Expertise</h3>
+            <h3 className="font-black text-2xl mb-4 uppercase italic tracking-tight">Some Of Skills & Expertise</h3>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
                 <span
@@ -64,20 +72,52 @@ import React from "react";
             </div>
           </div>
 
-          {/* Things I Love */}
-          <div>
-            <h3 className="font-black text-2xl mb-4 uppercase italic tracking-tight">Things I Love</h3>
-            <div className="flex gap-6 text-3xl">
-              <span title="React">⚛️</span>
-              <span title="Web">🌐</span>
-              <span title="Design">🎨</span>
-              <span title="Coffee">☕</span>
-            </div>
-          </div>
+       
+          
         </div>
 
       </div>
     </section>
+<section className=" py-24 px-6 font-sans">
+  <div className="max-w-4xl mx-auto">
+  
+
+   
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      
+      <div className="bg-white p-8 rounded-2xl shadow-lg border hover:bg-blue-50 transition">
+        <div className="flex items-center gap-3 mb-4">
+          
+          <h4 className="text-xl font-bold text-slate-800">Some Of My Certificates </h4>
+        </div>
+
+        <ul className="space-y-3 text-slate-600">
+          <li>High School Diploma (MCE)</li>
+          <li>Full-stack Development - Alight Coding School</li>
+          <li>Duolingo International Certificate</li>
+          <li>Entrepreneurship Challenge Innovator</li>
+        </ul>
+      </div>
+
+     
+      <div className="bg-white p-8 rounded-2xl shadow-lg border hover:bg-blue-50 transition">
+        <div className="flex items-center gap-3 mb-4">
+         
+          <h4 className="text-xl font-bold text-slate-800">Languages</h4>
+        </div>
+
+        <ul className="space-y-3 text-slate-600">
+          <li>Kinyarwanda (Native)</li>
+          <li>English (B1/B2 - Academic & Business)</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    </>
   );
 }
 

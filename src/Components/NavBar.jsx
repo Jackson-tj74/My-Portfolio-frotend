@@ -16,9 +16,9 @@ export function NavBar() {
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-[100] transition-all duration-300 px-[60px] ${
+      className={`fixed top-0 w-full z-[100] transition-all bg-[#D9D9D9]/20 border-b border-gray-400 duration-300 px-[60px] ${
         scrolled 
-          ? "py-4 bg-white/70 backdrop-blur-lg border-b border-gray-100 shadow-sm" 
+          ? "py-4 bg-[#D9D9D9]/20 backdrop-blur-lg border-b border-gray-400 shadow-sm" 
           : "py-6 bg-transparent"
       }`}
     >
@@ -37,12 +37,6 @@ export function NavBar() {
           <Link to="/projects" className="hover:text-transition-colors hover:text-indigo-500">Projects</Link>
            <Link to="/contact-us" className="hover:text-transition-colors hover:text-indigo-500">Contactus</Link>
           
-          <Link 
-            to="/login" 
-            className="bg-text-white px-7 py-2.5 rounded-full hover:shadow-lg hover:scale-105 transition-all active:scale-95"
-          >
-           extra Info
-          </Link>
         </div>
 
         
@@ -66,7 +60,6 @@ export function NavBar() {
           <Link to="/services" onClick={() => setIsOpen(false)} className="text-xl font-medium text-gray-800 hover:text-indig0-500">Services</Link>
         <Link to="/projects" onClick={() => setIsOpen(false)} className="bg-indigo-300 text-black text-center py-4 rounded-xl  hover:bg-indigo-500">Projects</Link>
          <Link to="/contact-us" onClick={() => setIsOpen(false)} className="bg-indigo-300 text-black text-center py-4 rounded-xl  hover:bg-indigo-500">Contactus</Link>
-         <Link to="/extra-info" onClick={() => setIsOpen(false)} className="bg-indigo-300 text-black text-center py-4 rounded-xl  hover:bg-indigo-500">extra info</Link>
         
         </div>
       )}

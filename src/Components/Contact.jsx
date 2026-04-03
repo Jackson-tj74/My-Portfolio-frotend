@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ModernBentoFooter from "./Footer";
+
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -33,7 +33,7 @@ const Contact = () => {
     <section className="min-h-screen bg-gradient-to-br from-white to-gray-100 pt-32 pb-20 px-6 md:px-16">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
 
-        {/* Info */}
+      
         <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
             Let’s create <br /><span className="text-green-500">something amazing.</span>
@@ -41,7 +41,7 @@ const Contact = () => {
           <p className="text-gray-600 text-lg">Have a project idea or looking to collaborate? Send a message and I’ll respond within 24 hours.</p>
         </div>
 
-        {/* Form */}
+    
         <div className="bg-white p-10 rounded-[40px] shadow-xl border border-gray-200">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
@@ -68,7 +68,7 @@ const Contact = () => {
         </div>
 
       </div>
-      <ModernBentoFooter />
+    
     </section>
   );
 };

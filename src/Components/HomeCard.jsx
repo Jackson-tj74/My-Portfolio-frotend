@@ -3,13 +3,13 @@ import { Link } from "react-router";
 
 const HomeCard = () => {
   return (
-    <div className="bg-white font-sans text-gray-900">
+    <div className=" font-sans text-gray-900">
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-6 md:px-16 bg-gradient-to-br from-white to-gray-100 overflow-hidden">
+  
+      <section className="relative min-h-screen flex items-center px-6 md:px-16 overflow-hidden">
         <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
 
-          {/* Hero Text */}
+       
           <div className="space-y-6 order-2 md:order-1">
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
               Crafting <span className="text-green-500">Digital</span> Stories
@@ -63,8 +63,8 @@ const HomeCard = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-6 md:px-16 bg-gray-50">
+     
+      <section className="py-20 px-6 md:px-16 bg-[#F2F2F7]">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold">Services I Offer</h2>
           <p className="text-gray-500 mt-3">Building modern solutions tailored to your needs</p>
@@ -89,7 +89,7 @@ const HomeCard = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+    
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold">What Clients Say</h2>
@@ -97,7 +97,7 @@ const HomeCard = () => {
         <TestimonialCard />
       </section>
 
-      {/* Footer */}
+   
 
     </div>
   );
@@ -107,8 +107,8 @@ const HomeCard = () => {
 const testimonials = [
   {
     id: 1,
-    name: "NIYOMUFASHA Alice",
-    email: "niyoalice@gmail.com",
+    name: "Jackson Tuyikunde",
+    email: "tuyikundejackson74@gmail.com",
     message:
       "From start to finish, the experience was smooth and professional. The results exceeded expectations.",
     image: "/pic1.jpg",
@@ -116,7 +116,7 @@ const testimonials = [
   {
     id: 2,
     name: "Tyga Brown",
-    email: "tygabrown780@gmail.com",
+    email: "tij79907@gmail.com",
     message:
       "What impressed us most was how well they understood our goals. Every suggestion felt tailored.",
     image: "/pic2.jpg",
@@ -137,7 +137,7 @@ const TestimonialCard = () => {
     <div className="relative max-w-6xl mx-auto px-6 md:px-0">
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
 
-        {/* Image */}
+        
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
           <img
             src={testimonials[current].image}
@@ -146,7 +146,7 @@ const TestimonialCard = () => {
           />
         </div>
 
-        {/* Testimonial Content */}
+     
         <div className="bg-green-50 p-8 rounded-3xl shadow-lg relative flex-1">
           <span className="text-green-500 text-6xl absolute -top-6 left-6">“</span>
           <p className="text-gray-700 italic text-lg">{testimonials[current].message}</p>

@@ -1,6 +1,7 @@
-import AboutMeCard from "../Components/MoreAboutMeCard";
+import AboutMe from "../Components/ExtraInfo";
+
 
 
  export function MoreAboutMe (){
-    return <AboutMeCard />
+    return< AboutMe/>
 }
