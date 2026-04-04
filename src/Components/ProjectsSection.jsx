@@ -7,7 +7,7 @@ function ProjectsSection() {
       title: "Community Services",
       description: "Collaborative project built with classmates to provide community services.",
       image: "/Image1.png", // Replace with actual path
-      tags: ["React", "Tailwind", "Collaboration"],
+      tags: ["React", "Tailwind", "Node.js","UI/UX Desgin"],
       github: "https://github.com/Alight-Rw/Community-Services",
       demo: "https://community-services-nyabiheke-cohort4.netlify.app",
     },
@@ -15,26 +15,25 @@ function ProjectsSection() {
       category: "Mine",
       title: "Online Booking Platform",
       description: "A personal project for booking services online with full functionality.",
-      image: "/Image2.png", // Replace with actual path
-      tags: ["React", "Node.js", "API"],
+      image: "/Image2.png",
+      tags: ["React", "Tailwind", "Node.js","UI/UX Desgin"],
       github: "https://github.com/Jackson-tj74/booking-online-db",
       demo: "https://booking-online-services.netlify.app",
     },
     {
-      category: "Me and with colleges",
+      category: "Mine", 
       title: "Group Chat",
       description: "Real-time messaging app built collaboratively for learning purposes.",
-      image: "/Image3.png", // Replace with actual path
-      tags: ["Socket.io", "React", "Node.js"],
+      image: "/Image3.png",
+      tags: ["Socket.io", "React", "Node.js","UI/UX Desgin"],
       github: "https://github.com/Jackson-tj74/group-chat",
       demo: "https://advisor-chat.netlify.app",
-    },
-    {
+    }, {
       category: "Mine",
       title: "My Portfolio",
-      description: "My personal portfolio showcasing my skills and projects.",
-      image: "/Image4.png", // Replace with actual path
-      tags: ["React", "Tailwind", "UI/UX"],
+      description: "My personal portfolio showcasing my skills.",
+      image: "/Image4.png",
+      tags: ["React", "Tailwind","Node.js", "UI/UX Desgin", ],
       github: "https://github.com/Jackson-tj74/My-Portfolio-frotend",
       demo: "https://my-portfolio-tj.netlify.app",
     },
@@ -51,7 +50,12 @@ function ProjectsSection() {
           <p className="mt-4 text-gray-500 font-medium">
             A selection of my recent work and experiments.
           </p>
+           <p className="mt-4  font-bold">
+            SOME OF MINE OR COLLABOLATION HOSTED PROJECTS
+          </p>
         </div>
+
+    
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-10">
@@ -65,7 +69,7 @@ function ProjectsSection() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-70 object-cover"
                 />
               </div>
 

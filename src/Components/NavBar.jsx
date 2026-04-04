@@ -25,9 +25,9 @@ export function NavBar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
        
-        <div className="text-2xl font-black tracking-tighter text-gray-900">
-          MY<span className="text-secondary">PORTFOLIO.</span>
-        </div>
+        <Link to="/" className="text-2xl font-black tracking-tighter text-gray-900">
+          MY<span className="text-secondary px-2">PORTFOLIO.</span>
+        </Link>
 
         
         <div className="hidden md:flex items-center space-x-10 font-semibold text-gray-700">
@@ -35,7 +35,8 @@ export function NavBar() {
           <Link to="/about" className="hover:text-transition-colors hover:text-indigo-500">About</Link>
           <Link to="/services" className="hover:text-transition-colors hover:text-indigo-500">Services</Link>
           <Link to="/projects" className="hover:text-transition-colors hover:text-indigo-500">Projects</Link>
-           <Link to="/contact-us" className="hover:text-transition-colors hover:text-indigo-500">Contactus</Link>
+          <Link to="/contact-us" className="hover:text-transition-colors hover:text-indigo-500">Contactus</Link>
+           <Link to="/Login" className="hover:text-transition-colors hover:text-indigo-500">Messages</Link>
           
         </div>
 
@@ -60,6 +61,7 @@ export function NavBar() {
           <Link to="/services" onClick={() => setIsOpen(false)} className="text-xl font-medium text-gray-800 hover:text-indig0-500">Services</Link>
         <Link to="/projects" onClick={() => setIsOpen(false)} className="bg-indigo-300 text-black text-center py-4 rounded-xl  hover:bg-indigo-500">Projects</Link>
          <Link to="/contact-us" onClick={() => setIsOpen(false)} className="bg-indigo-300 text-black text-center py-4 rounded-xl  hover:bg-indigo-500">Contactus</Link>
+          <Link to="/login" onClick={() => setIsOpen(false)} className="bg-indigo-300 text-black text-center py-4 rounded-xl  hover:bg-indigo-500">Messages</Link>
         
         </div>
       )}
