@@ -3,11 +3,18 @@ import React from "react";
 import { Sun, Bell, Settings, Leaf, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
+import { useProfile } from "../../Hooks/useProfileHooks";
 
 const DashboardNav = () => {
+     const { data } = useProfile();
+    
     const navigate = useNavigate();
     const { user } = useAuth();
 
+    const userData = {
+        name:data?.data?.name || "—",
+        image: data?.data?.avatar || "/pic1.jpg",
+      };
     return (
         <nav className="fixed top-0 right-0 z-40 w-full h-20 px-6 lg:px-12 flex justify-between items-center bg-white/70 backdrop-blur-xl border-b border-green-100 shadow-sm font-sans">
 
@@ -30,7 +37,6 @@ const DashboardNav = () => {
                     <span className="text-[12px] font-bold text-green-800">System Live</span>
                 </div>
 
-                {/* Theme Toggle */}
                 <button className="p-2.5 bg-white text-green-800 rounded-xl border border-green-100 hover:bg-emerald-500 hover:text-white hover:shadow-lg hover:shadow-emerald-200 transition-all duration-300">
                     <Sun size={20} strokeWidth={2.5} />
                 </button>
@@ -47,15 +53,13 @@ const DashboardNav = () => {
                 >
                     <div className="h-10 w-10 lg:h-11 lg:w-11 rounded-xl overflow-hidden border-2 border-emerald-100 group-hover:border-emerald-400 transition-colors">
                         <div className="h-10 w-10 lg:h-11 lg:w-11 rounded-xl overflow-hidden border-2 border-emerald-100 flex items-center justify-center bg-emerald-50">
-                            {user?.avatar ? (
+                          
                                 <img
-                                    src={user.avatar}
+                                    src={userData.image}
                                     alt="User profile"
                                     className="w-full h-full object-cover"
                                 />
-                            ) : (
-                                <User size={24} className="text-emerald-600" />
-                            )}
+    
                         </div>
                     </div>
                     <div className="hidden lg:block">

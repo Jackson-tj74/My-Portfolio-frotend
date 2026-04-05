@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAuth } from "../Context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { APIsRequestService } from "../Services/APIsRequestService";
 
@@ -31,7 +31,7 @@ const Signup = () => {
     const data = await response.json();
      
 
-      if (res.ok) {
+      if (response.ok) {
         login(data);
         toast.success("Signup successful! Redirecting to dashboard...");
         navigate("/login");
@@ -49,6 +49,7 @@ const Signup = () => {
   return (
     <> 
       <div className="max-w-7xl mx-auto flex justify-between items-center">
+         <ToastContainer position="top-right" autoClose={3000} />
         <Link to="/" className="text-2xl font-black tracking-tighter text-gray-900 mt-20">
           MY<span className="text-secondary px-2">PORTFOLIO.</span>
         </Link>

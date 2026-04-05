@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import DashboardNav from "./DasbordNav";
 import Sidebar from "./SideBar";
+import ContactsTable from "./ContactsTable";
+import BlogSectionI from "./BlogCardChild";
+
 
 
 export function DashboardLayout() {
@@ -33,18 +36,24 @@ export function DashboardLayout() {
 
         {/* Main Content */}
         <main
-          className={`flex-1 overflow-y-auto transition-all duration-300 ease-in-out ${
-            isExpanded ? "xl:ml-64" : "xl:ml-20"
-          }`}
+          className={`flex-1 overflow-y-auto transition-all duration-300 ease-in-out ${isExpanded ? "xl:ml-64" : "xl:ml-20"
+            }`}
         >
-          <div className="p-6">
-           
-           
+          <div className=" py-20 min-h-[60vh] flex flex-col  justify-center">
+
+            <div className="w-full max-w-6xl">
+
+              <ContactsTable />
+
+              <BlogSectionI />
+              
+            </div>
+
           </div>
         </main>
       </div>
 
-    
+
     </div>
   );
 }

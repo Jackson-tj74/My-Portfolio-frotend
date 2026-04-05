@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import { Home } from "./Pages/Home";
 import { ShowOut } from "./Components/ShowOut";
 import { AboutI } from "./Pages/AboutI";
@@ -7,15 +6,14 @@ import { Projects } from "./Pages/Projects";
 import { Services } from "./Pages/Services";
 import { ContactUs } from "./Pages/ContactUs";
 import { LoginPage } from "./Pages/LoginPage";
-// import { ProtectedRoutes } from "../ProtectedRoutes";
 import { DashboardPage } from "./Pages/DashboardPage";
 import { RegisterPage } from "./Pages/RegisterPage";
 import { SettingsPage } from "./Pages/SettingsPage";
+import ProtectedRoute from "../ProtectedRoutes";
 
 function App() {
   return (
     <BrowserRouter>
-       <ToastContainer position="top-right" autoClose={3000} />
       <Routes>
       
         <Route path="/" element={<ShowOut />}>
@@ -26,24 +24,29 @@ function App() {
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
            <Route path="/login" element={< LoginPage/>} />
-            <Route path="/signup" element={<RegisterPage/>} />
-
-         
+           <Route
+            path="/signup"
+            element={
+              <ProtectedRoute>
+                <RegisterPage />
+              </ProtectedRoute>
+            }
+          />
          
              <Route
             path="/dashboard"
             element={
-              // <ProtectedRoutes>
+              <ProtectedRoute>
                 <DashboardPage />
-              // </ProtectedRoutes>
+              </ProtectedRoute>
             }
           />
            <Route
             path="/settings"
             element={
-              // <ProtectedRoutes>
+              <ProtectedRoute>
                 <SettingsPage />
-              // </ProtectedRoutes>
+               </ProtectedRoute>
             }
           />
         

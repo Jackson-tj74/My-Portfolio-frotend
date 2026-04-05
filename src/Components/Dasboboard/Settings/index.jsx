@@ -28,7 +28,7 @@ export function Settings() {
         <main className="flex-1 pl-20 md:pl-20 overflow-y-auto transition-all duration-300">
           <div className="max-w-[1600px] not-[]:mx-auto py-20 md:space-y-10 ">
             
-            <div className="ml-8 md:ml-0">
+            <div className="ml-8 md:ml-0 py-20">
               <SettingProfileSection />
               <SettingsCard />
             </div>

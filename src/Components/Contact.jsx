@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { APIsRequestService } from "../Services/APIsRequestService";
+import { toast, ToastContainer } from "react-toastify";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -13,7 +14,7 @@ const Contact = () => {
     setLoading(true); 
     try {
      
-        const response = await APIsRequestService.SignInAPI({ name, email, service, message });
+        const response = await APIsRequestService.contactUsAPI({ name, email, service, message });
      
        const data = await response.json();
 
@@ -33,7 +34,7 @@ const Contact = () => {
   return (
     <section className="min-h-screen pt-52 pb-20 px-6 md:px-16 ">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-
+          <ToastContainer />
         <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
             Let’s create <br /><span className="text-green-500">something amazing.</span>
