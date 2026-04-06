@@ -96,6 +96,7 @@ import { BookOpen, Code2, ExternalLink } from 'lucide-react';
           <li>High School Diploma (MCE)</li>
           <li>Full-stack Development - Alight Coding School</li>
           <li>Duolingo International Certificate</li>
+            <li>Certified English Communications (IELTS Academic)</li>
           <li>Entrepreneurship Challenge Innovator</li>
         </ul>
       </div>
@@ -109,7 +110,7 @@ import { BookOpen, Code2, ExternalLink } from 'lucide-react';
 
         <ul className="space-y-3 text-slate-600">
           <li>Kinyarwanda (Native)</li>
-          <li>English (B1/B2 - Academic & Business)</li>
+          <li>English </li>
         </ul>
       </div>
 
