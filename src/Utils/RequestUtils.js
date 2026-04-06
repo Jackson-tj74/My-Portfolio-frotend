@@ -1,7 +1,8 @@
 import { decrypt, encrypt, generateDeviceId } from "./SharedUtils";
 
-export const BASE_URL = `${import.meta.env.VITE_SERVER_URL}/api/v1`;
-
+export const BASE_URL =
+  `${import.meta.env.VITE_SERVER_URL || "https://my-portfolio-server-eymh.onrender.com"}/api/v1`;
+  
 export const AuthHeader = (type) => {
   const token = localStorage.getItem("token");
   const headers = {};
